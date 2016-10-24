@@ -14,7 +14,7 @@ define :download_installer do
 
   link '/opt/codedeploy-agent' do
     to '/opt/download-codedeploy'
-    not_if 'test -f /opt/codedeploy-agent'
+    not_if 'test -d /opt/codedeploy-agent'
   end
 
   file '/opt/codedeploy-agent/bin/codedeploy-agent' do
